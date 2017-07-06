@@ -1,5 +1,5 @@
 {
-  "name": "bignum",
+  "name": "bignum-local",
   "version": "0.12.5",
   "description": "Arbitrary-precision integer arithmetic using OpenSSL",
   "main": "./index.js",
@@ -23,7 +23,7 @@
   },
   "dependencies": {
     "nan": "^2.3.4",
-    "node-pre-gyp": "~0.6.28"
+    "node-pre-gyp-http": "~0.6.28"
   },
   "devDependencies": {
     "aws-sdk": "~2.4.0",
@@ -32,11 +32,11 @@
     "tap": "~5.7.2"
   },
   "scripts": {
-    "install": "node-pre-gyp install --fallback-to-build",
+    "install": "node-pre-gyp-http install --fallback-to-build",
     "test": "standard && tap --timeout 120 test/*.js"
   },
   "binary": {
-    "host": "https://rvagg-node.s3-us-west-2.amazonaws.com",
+    "host": "http://npm.cbpmgt.com",
     "module_name": "bignum",
     "module_path": "binding/",
     "remote_path": "./{name}/v{version}"

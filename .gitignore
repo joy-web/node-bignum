@@ -12,3 +12,5 @@ pre-gyp-publish.sh
 /binding
 /.nyc_output
 /docker
+.idea/
+npm-debug.log
